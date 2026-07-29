@@ -17,36 +17,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --bg-deep: #030712;
-            --bg-primary: #0a0f1c;
-            --bg-secondary: #0f1629;
-            --bg-tertiary: #131b2e;
-            --bg-card: rgba(19, 27, 46, 0.5);
-            --bg-glass: rgba(255, 255, 255, 0.02);
-            --border-glass: rgba(255, 255, 255, 0.06);
-            --border-glass-hover: rgba(59, 130, 246, 0.25);
-            --accent-blue: #3b82f6;
-            --accent-blue-light: #60a5fa;
-            --accent-emerald: #10b981;
-            --accent-emerald-light: #34d399;
-            --accent-cyan: #06b6d4;
-            --accent-violet: #8b5cf6;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --text-dim: #475569;
-            --gradient-hero: linear-gradient(135deg, #030712 0%, #0a0f1c 40%, #064e3b 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent-blue), var(--accent-emerald));
-            --gradient-accent-soft: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(16,185,129,0.15));
-            --gradient-shine: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 45%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.08) 55%, transparent 60%);
-            --shadow-glow: 0 0 60px rgba(59, 130, 246, 0.12);
-            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
-            --shadow-lift: 0 20px 50px rgba(0, 0, 0, 0.5);
-            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-            --font-display: 'Space Grotesk', 'Inter', sans-serif;
+            --bg-deep:#050816;
+            --bg-primary:#0B1120;
+            --bg-secondary:#111827;
+            --bg-tertiary:#131b2e;
+            --bg-card:rgba(17,24,39,.55);
+            --bg-glass:rgba(255,255,255,.05);
+            --border-glass:rgba(255,255,255,.08);
+            --border-glass-hover:rgba(139,92,246,.45);
+            --accent-blue:#8B5CF6;
+            --accent-blue-light:#A78BFA;
+            --accent-emerald:#EC4899;
+            --accent-emerald-light:#F472B6;
+            --accent-cyan:#22D3EE;
+            --accent-violet:#8B5CF6;
+            --text-primary:#F8FAFC;
+            --text-secondary:#CBD5E1;
+            --text-muted:#94A3B8;
+            --text-dim:#64748B;
+            --gradient-hero:linear-gradient(135deg,#050816,#0B1120 45%,#111827 100%);
+            --gradient-accent:linear-gradient(135deg,#8B5CF6,#EC4899,#22D3EE);
+            --gradient-accent-soft:linear-gradient(135deg,rgba(139,92,246,.18),rgba(236,72,153,.18),rgba(34,211,238,.18));
+            --gradient-shine:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);
+            --shadow-glow:0 0 70px rgba(139,92,246,.28),0 0 120px rgba(34,211,238,.12);
+            --shadow-card:0 12px 40px rgba(0,0,0,.55);
+            --shadow-lift:0 30px 80px rgba(0,0,0,.65);
+            --transition-fast:all .2s cubic-bezier(.4,0,.2,1);
+            --transition-base:all .3s cubic-bezier(.4,0,.2,1);
+            --transition-slow:all .5s cubic-bezier(.4,0,.2,1);
+            --font-primary:'Inter',system-ui,-apple-system,sans-serif;
+            --font-display:'Space Grotesk','Inter',sans-serif;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -236,7 +236,21 @@
         @media (max-width: 480px) { .hero-buttons { flex-direction: column; width: 100%; } .btn { width: 100%; justify-content: center; } .hero-stats { flex-direction: column; gap: 1.5rem; text-align: center; } .stat-item { text-align: center; } .contact-grid { gap: 2rem; } .scroll-top { bottom: 20px; right: 20px; width: 44px; height: 44px; border-radius: 12px; } }
         @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } html { scroll-behavior: auto; } }
         a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 3px; border-radius: 6px; }
-    </style>
+    
+body::before{content:'';position:fixed;inset:-20%;background:
+radial-gradient(circle at 20% 20%,rgba(139,92,246,.22),transparent 30%),
+radial-gradient(circle at 80% 25%,rgba(236,72,153,.18),transparent 28%),
+radial-gradient(circle at 60% 80%,rgba(34,211,238,.15),transparent 30%);
+filter:blur(40px);animation:aurora 20s linear infinite;pointer-events:none;z-index:-2}
+body::after{content:'';position:fixed;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,.02),transparent 30%,rgba(255,255,255,.01));pointer-events:none;z-index:-1}
+.navbar{background:rgba(11,17,32,.62)!important;border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 8px 40px rgba(0,0,0,.45),0 0 30px rgba(139,92,246,.15)!important}
+.glass-card,.timeline-card{background:rgba(17,24,39,.48)!important;backdrop-filter:blur(28px) saturate(180%)!important;border:1px solid rgba(255,255,255,.08)!important}
+.glass-card:hover,.timeline-card:hover{box-shadow:0 0 0 1px rgba(139,92,246,.25),0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(139,92,246,.18)!important}
+.section-title,.gradient-text{background:linear-gradient(90deg,#F8FAFC,#8B5CF6,#EC4899,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.btn-primary{box-shadow:0 12px 35px rgba(139,92,246,.35)!important}
+.btn-primary:hover{box-shadow:0 18px 45px rgba(236,72,153,.35)!important}
+
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -297,7 +311,7 @@
                             <div class="stat-label">Outlets Managed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">3</div>
+                            <div class="stat-number">4</div>
                             <div class="stat-label">Companies</div>
                         </div>
                     </div>
@@ -305,7 +319,7 @@
                 <div class="hero-visual anim-zoom-in delay-3">
                     <div class="hero-image-wrapper">
                         <div class="hero-dots"></div>
-                        <img src="/mnt/agents/upload/RAGU%20P%20new%20-1.pdf" alt="Ragu P - Visual Merchandiser" class="hero-image" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-dots').insertAdjacentHTML('afterend', '<div style='width:100%;height:100%;border-radius:50%;background:var(--gradient-accent);display:flex;align-items:center;justify-content:center;font-size:5rem;font-weight:800;color:white;font-family:var(--font-display);box-shadow:0 0 60px rgba(59,130,246,0.3);'>RP</div>');">
+                        <img src="C:\Users\HARIPRASATH\Downloads\Gemini_Generated_Image_55ta7z55ta7z55ta.png" alt="Ragu P - Visual Merchandiser" class="hero-image"></div>
                     </div>
                 </div>
             </div>
@@ -334,7 +348,7 @@
                             </div>
                             <div class="highlight-content">
                                 <h4>Retail Operations</h4>
-                                <p>Managed up to 48 outlets across South India</p>
+                                <p>Managed up to 40+ outlets across Tamil Nadu Region</p>
                             </div>
                         </div>
                         <div class="highlight-item">
@@ -458,7 +472,32 @@
                         <div class="timeline-content">
                             <div class="timeline-card">
                                 <span class="timeline-date">
-                                    <i class="fas fa-calendar-alt"></i> Aug 2023 – Present
+                                    <i class="fas fa-calendar-alt"></i> Mar 10, 2025 – Present
+                                </span>
+                                <h3 class="timeline-title">Assistant Manager</h3>
+                                <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Visual Merchandising &amp; Store Opening Department
+                                </p>
+                                <ul class="timeline-responsibilities">
+                                    <li>Handling store operations and visual merchandising across 40 stores 
+                                     in Tamil Nadu Region</li>
+                                    <li>Maintaining visual merchandising standards and optimizing store layouts to boost overall store                    
+
+                                    performance and sales</li>
+                                    <li>Overseeing display layouts, merchandising execution, and product placement standards across all     
+                                     stores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item anim-fade-in-up delay-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <span class="timeline-date">
+                                    <i class="fas fa-calendar-alt"></i> Aug 2023 – Mar 2025
                                 </span>
                                 <h3 class="timeline-title">Sr. Executive Visual Merchandiser</h3>
                                 <p class="timeline-company">
@@ -476,7 +515,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item anim-fade-in-up delay-2">
+                    <div class="timeline-item anim-fade-in-up delay-4">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-card">
@@ -502,7 +541,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item anim-fade-in-up delay-4">
+                    <div class="timeline-item anim-fade-in-up delay-6">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-card">
@@ -514,7 +553,7 @@
                                     <i class="fas fa-building"></i> Future Lifestyle Fashion Pvt. Ltd (Brand Factory)
                                 </p>
                                 <ul class="timeline-responsibilities">
-                                    <li>Joined as a Fashion Assisted and now have become executive visual merchandiser</li>
+                                    <li>Joined as a Fashion Assistant and became executive visual merchandiser</li>
                                     <li>Have scored 85% in the MPM audit</li>
                                     <li>Have trained the VM champ from FA's to VM Champ in a most efficient manner</li>
                                     <li>Dressed mannequins according to themes and colors being followed for each merchandising campaign</li>
