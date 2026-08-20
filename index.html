@@ -1798,6 +1798,222 @@ body.catalog-modal-open { overflow:hidden; }
     .featured-photo-frame { border-radius: 20px; }
 }
 
+
+
+/* =========================================================
+   MOBILE RESPONSIVE FIX — REMOVE RIGHT-SIDE GAP / OVERFLOW
+   Keeps the existing desktop design unchanged.
+   ========================================================= */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+}
+
+img,
+video,
+canvas,
+svg,
+iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100vw;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    main,
+    header,
+    footer,
+    section,
+    .hero,
+    .navbar,
+    .section-container,
+    .hero-container,
+    .about-grid,
+    .contact-grid,
+    .skills-grid,
+    .education-grid,
+    .strengths-grid,
+    .timeline,
+    .work-gallery-section,
+    .work-gallery-grid,
+    .company-catalog-section,
+    .featured-photo-section,
+    .featured-photo-card,
+    .featured-photo-copy,
+    .featured-photo-frame {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-container,
+    .section-container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-content,
+    .hero-visual,
+    .hero-image-wrapper,
+    .about-text,
+    .about-highlights,
+    .contact-info,
+    .contact-cta,
+    .timeline-content,
+    .glass-card,
+    .timeline-card,
+    .education-card,
+    .strength-card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero-image-wrapper {
+        width: min(260px, 70vw);
+        height: min(260px, 70vw);
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    section {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .section-container {
+        overflow: visible;
+    }
+
+    .hero-description,
+    .featured-photo-copy p,
+    .about-text,
+    .timeline-responsibilities,
+    .contact-details {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .work-gallery-grid {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .work-gallery-card,
+    .work-gallery-image-wrap {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .featured-photo-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .featured-photo-card {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .featured-photo-frame {
+        width: 100%;
+    }
+
+    .featured-photo-frame img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .company-catalog-modal {
+        width: 100%;
+        max-width: 100vw;
+        padding: 10px;
+    }
+
+    .catalog-modal-shell {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .catalog-stage,
+    .catalog-stage-figure,
+    .catalog-stage-figure img,
+    .catalog-thumbs {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .floating-buttons {
+        right: 14px;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        width: calc(100% - 16px);
+        max-width: calc(100% - 16px);
+        left: 8px;
+        right: 8px;
+        transform: none;
+    }
+
+    .hero {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    section,
+    .featured-photo-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-image-wrapper {
+        width: min(230px, 68vw);
+        height: min(230px, 68vw);
+    }
+
+    .glass-card,
+    .timeline-card {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .floating-buttons {
+        right: 10px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -1912,7 +2128,7 @@ body.catalog-modal-open { overflow:hidden; }
 <div class="hero-visual anim-zoom-in delay-3">
 <div class="hero-image-wrapper">
 <div class="hero-dots"></div>
-<img alt="Ragu P - Visual Merchandiser" class="hero-image" height="340" loading="eager" src="images/profile.jpeg">
+<img alt="Ragu P - Visual Merchandiser" class="hero-image" height="440" loading="eager" src="images/profile.jpeg">
 </div>
 </div>
 </div>
