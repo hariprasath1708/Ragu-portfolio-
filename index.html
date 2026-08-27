@@ -308,6 +308,10 @@
         .contact-card:hover .contact-icon { transform: scale(1.1); }
         .contact-details h4 { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem; font-weight: 600; font-family: var(--font-mono); }
         .contact-details p { font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+        .contact-number-list { display: flex; flex-direction: column; gap: 0.35rem; }
+        .contact-number-list a { font-size: 1rem; font-weight: 600; color: var(--text-primary); text-decoration: none; transition: var(--transition-fast); }
+        .contact-number-list a:hover { color: var(--accent-cyan); }
+        .contact-card-multi { min-height: 92px; }
         .contact-cta { text-align: center; padding: 3.5rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .contact-cta h3 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 1rem; font-weight: 700; }
         .contact-cta p { color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; max-width: 320px; }
@@ -380,7 +384,8 @@
             .btn { width: 100%; justify-content: center; } 
             .hero-stats { flex-direction: column; gap: 1.5rem; text-align: center; } 
             .stat-item { text-align: center; } 
-            .contact-grid { gap: 2rem; } 
+            .contact-grid { gap: 2rem; }
+            .contact-number-list a { font-size: 0.92rem; } 
         }
         
         @media (prefers-reduced-motion: reduce) { 
@@ -2653,24 +2658,30 @@ iframe {
 <p>ragun103@gmail.com</p>
 </div>
 </a>
-<a class="contact-card" href="https://wa.me/918056577931" rel="noopener noreferrer" target="_blank">
+<div class="contact-card contact-card-multi">
 <div class="contact-icon" style="background: linear-gradient(135deg, #25d366, #128c7e);">
 <i class="fab fa-whatsapp"></i>
 </div>
 <div class="contact-details">
 <h4>WhatsApp</h4>
-<p>+91 80565 77931</p>
+<div class="contact-number-list">
+<a href="https://wa.me/918056577931" rel="noopener noreferrer" target="_blank">+91 80565 77931</a>
+<a href="https://wa.me/919791968699" rel="noopener noreferrer" target="_blank">+91 97919 68699</a>
 </div>
-</a>
-<a class="contact-card" href="tel:+918056577931">
+</div>
+</div>
+<div class="contact-card contact-card-multi">
 <div class="contact-icon">
 <i class="fas fa-phone-alt"></i>
 </div>
 <div class="contact-details">
 <h4>Phone</h4>
-<p>+91 80565 77931</p>
+<div class="contact-number-list">
+<a href="tel:+918056577931">+91 80565 77931</a>
+<a href="tel:+919791968699">+91 97919 68699</a>
 </div>
-</a>
+</div>
+</div>
 <div class="contact-card">
 <div class="contact-icon">
 <i class="fas fa-map-marker-alt"></i>
